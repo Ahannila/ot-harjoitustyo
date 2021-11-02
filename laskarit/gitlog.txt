@@ -1,0 +1,112 @@
+commit 67e6a342b9140f5b6e3ffe83238ce3601bf6117f
+Author: Ahannila <arttuhannila123@gmail.com>
+Date:   Tue Nov 2 12:02:06 2021 +0200
+
+    poistettiin ja nimettiin uudelleen tiedostost
+
+ tiedostot/file2             | 0
+ tiedostot/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 43e7bcd202e3b2cc10131ffec87ecff82af2cd1f
+Author: Ahannila <arttuhannila123@gmail.com>
+Date:   Tue Nov 2 11:58:06 2021 +0200
+
+    lisätty kansio tiedostot ja tiedostot sen sisään
+
+ tiedostot/file1 | 0
+ tiedostot/file2 | 0
+ tiedostot/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 69e83da50fca86fb64717421d816bf71c1909d53
+Author: Ahannila <arttuhannila123@gmail.com>
+Date:   Tue Nov 2 11:04:45 2021 +0200
+
+    muokkaukset
+
+ eka.txt    | 2 +-
+ kolmas.txt | 1 +
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+commit 269f4c67ba338c8c23f522c4ed6b6be97b8ef9b4
+Author: Ahannila <arttuhannila123@gmail.com>
+Date:   Tue Nov 2 10:54:54 2021 +0200
+
+    uudelleennimeäminen
+
+ eka.txt | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+
+commit bfff2061a5d3cba10918f38a4f96df4f2a3db75c
+Author: Ahannila <arttuhannila123@gmail.com>
+Date:   Tue Nov 2 10:54:34 2021 +0200
+
+    uudelleennimeäminen
+
+ tiedosto.txt | 14 --------------
+ 1 file changed, 14 deletions(-)
+
+commit 8cec3bba30ca65d70294117c6d983f7fa2ddbd34
+Author: Ahannila <arttuhannila123@gmail.com>
+Date:   Tue Nov 2 10:52:45 2021 +0200
+
+    Poistettiin toinen
+
+ toinen.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit b78cc2e8b9a5686a85a436743be8bc8a5aa1df9f
+Author: Ahannila <arttuhannila123@gmail.com>
+Date:   Tue Nov 2 10:50:29 2021 +0200
+
+    muokattiin tekstiä tiedosto.txt
+
+ tiedosto.txt | 15 +++------------
+ 1 file changed, 3 insertions(+), 12 deletions(-)
+
+commit ef6bcd6df08e7202191861432dccf73fd19c9247
+Author: Ahannila <arttuhannila123@gmail.com>
+Date:   Tue Nov 2 10:48:44 2021 +0200
+
+    lisättiin tekstiä tiedosto.txt
+
+ tiedosto.txt | 22 ++++++++++++++++++++++
+ 1 file changed, 22 insertions(+)
+
+commit 92fba27732b6e9b7b55f2a9c52bd08831cbaa870
+Author: Ahannila <arttuhannila123@gmail.com>
+Date:   Tue Nov 2 10:38:03 2021 +0200
+
+    lisättiin kansio stuff
+
+ "stuff/tekstej\303\244.txt" | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 705ec889f13905167d0a46ff1c80b7ec29babbc4
+Author: Ahannila <arttuhannila123@gmail.com>
+Date:   Tue Nov 2 10:37:06 2021 +0200
+
+    lisättiin kolmas
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit ec77590e2c546fbcf6813cfc4a0c24988abe1426
+Author: Ahannila <arttuhannila123@gmail.com>
+Date:   Tue Nov 2 10:33:48 2021 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit b46831f47a69cf2d6e2e19f636e4b1dc1717c964
+Author: Ahannila <arttuhannila123@gmail.com>
+Date:   Tue Nov 2 10:32:06 2021 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
