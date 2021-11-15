@@ -11,4 +11,4 @@
 
 ### Viikko2
 
-
+[kattavuus kuva](https://github.com/Ahannila/ot-harjoitustyo/blob/master/laskarit/viikko2/viikko2_kattavuus.png)
