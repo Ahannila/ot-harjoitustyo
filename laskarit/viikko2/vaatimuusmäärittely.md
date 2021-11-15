@@ -4,7 +4,7 @@
 
 Sovellus on tarkoitettu budjetointiin. Sovelluksessa käyttäjä voi lisätä 
 kulut-, ja menot sekä asiat ja esineet mihin budjetoidaan. Sovellus antaa 
-myös statistiikkaa tähän liittyen. Sovelluksella on monta käyttäjää ja 
+myös statistiikkaa tähän liittyen  Sovelluksella on monta käyttäjää ja 
 sovellukseen kirjaudutaan sisään. 
 
 ### Käyttäjät
@@ -33,5 +33,8 @@ Kirjautumisruudulla
 
 - Käyttäjä voi lisätä ja poistaa kuluja sekä menoja. Käyttäjä voi myös lisätä uusia
 asioita johon budjetoidaan. Käyttäjä voi myös poistaa asian johon oltiin budjetoitu.
+
+- Sovellus näyttää statistiikkaa ja esimerkiksi voi lisätä budjettia johonkin
+tulevaan reissuun. Esim että x määrä säästetty x asiaa varten.
 
 - Käyttäjä voi kirjautua järjestelmästä ulos.
