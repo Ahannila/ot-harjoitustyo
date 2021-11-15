@@ -9,3 +9,6 @@
 
 [komentorivi.txt](https://github.com/Ahannila/ot-harjoitustyo/blob/master/laskarit/komentorivi.txt)
 
+### Viikko2
+
+
