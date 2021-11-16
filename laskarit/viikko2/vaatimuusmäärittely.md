@@ -14,7 +14,7 @@ oikeuksilla, sekä normaali käyttäjä.
 
 ### Käyttöliittymäluonnos
 
-TÄHÄN KUVA
+![](./home/haarhaar/ot-harjoitustyo/laskarit/viikko2)
 
 ### Ohjelmiston tarjoamat toiminnallisuudet
 
@@ -35,6 +35,9 @@ Kirjautumisruudulla
 asioita johon budjetoidaan. Käyttäjä voi myös poistaa asian johon oltiin budjetoitu.
 
 - Sovellus näyttää statistiikkaa ja esimerkiksi voi lisätä budjettia johonkin
-tulevaan reissuun. Esim että x määrä säästetty x asiaa varten.
+tulevaan reissuun. Esim että x määrä säästetty x asiaa varten. Sovellus myös näyttää
+kokonaisrahamäärän.
+
+- Käyttäjä voi lisätä saldoa budjetoinninkohteeseen.
 
 - Käyttäjä voi kirjautua järjestelmästä ulos.
