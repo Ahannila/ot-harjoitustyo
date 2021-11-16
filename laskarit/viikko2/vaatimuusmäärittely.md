@@ -14,7 +14,7 @@ oikeuksilla, sekä normaali käyttäjä.
 
 ### Käyttöliittymäluonnos
 
-![](./home/haarhaar/ot-harjoitustyo/laskarit/viikko2)
+![](/home/haarhaar/ot-harjoitustyo/laskarit/viikko2)
 
 ### Ohjelmiston tarjoamat toiminnallisuudet
 
