@@ -1,0 +1,4 @@
+-Alusta poetry sovellukselle. 
+-Tietokannan alustus 
+-Käyttäjän lisääminen tietokantaan
+-käyttäjien näyttäminen tietokannasta.

@@ -1,5 +1,13 @@
 # Ohjelmistotekniikka, harjoitustyö
 
+## Projekti
+
+
+## Dokumentaatio
+
+
+
+
 ## Tehtävät
 
 ### Viikko 1

@@ -1,35 +1,47 @@
-from tkinter import Tk, ttk
+from sqlite3.dbapi2 import Connection
+from user_repository import user_repository
+from database_connection import get_database_connection
 
-class UI:
-    def __init__(self,root):
-        self._root = root
+class Budget_calculator():
+    def __init__(self, connection):
+        self.user = None
+        self._connection = connection
 
     def start(self):
-        heading_label = ttk.Label(master=self._root, text="Login")
+        print("Welcome to budget-tracker 9000")
+        print("Commands")
+        print("1: LOGIN")
+        print("2: CREATE ACCOUNT")
 
-        username_label = ttk.Label(master=self._root, text="Username")
-        username_entry = ttk.Entry(master=self._root)
-
-        password_label = ttk.Label(master=self._root, text="Password")
-        password_entry = ttk.Entry(master=self._root)
-
-        button = ttk.Button(master=self._root, text="Button")
-
-        heading_label.grid(row=0, column=0, columnspan=2)
-
-        username_label.grid(row=1, column=0)
-        username_entry.grid(row=1, column=1)
-
-        password_label.grid(row=2, column=0)
-        password_entry.grid(row=2, column=1)
-
-        button.grid(row=3, column=0, columnspan=2)
+        while True:
+            command = input("Choose command: ")
 
 
-window = Tk()
-window.title("TkInter example")
+            if command == "1":
+                self.login()
+            elif command == "2":
+                self.create_account()
+            elif self.user!=None:
+                print("Welcome in!")
+            else:
+                print("No such command")
 
-ui = UI(window)
-ui.start()
 
-window.mainloop()
+    def login(self):
+        username = input("Enter username: ")
+        user = user_repository.find_by_name(username)
+
+        if not user:
+            print("User not found")
+            return 
+        
+        self.user = user    
+        return user
+
+
+    def create_account(self):
+        name = input("Enter nick: ")
+        user_repository.create(name)
+
+app = Budget_calculator(Connection)
+app.start()
