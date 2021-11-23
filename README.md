@@ -30,21 +30,5 @@ poetry run invoke start
 
 
 
-## Tehtävät
-
-### Viikko 1
-
-
-[gitlog.txt](https://github.com/Ahannila/ot-harjoitustyo/blob/master/laskarit/gitlog.txt)
-
-[komentorivi.txt](https://github.com/Ahannila/ot-harjoitustyo/blob/master/laskarit/komentorivi.txt)
-
-### Viikko2
-
-
-[Kattavuus kuva](https://github.com/Ahannila/ot-harjoitustyo/blob/master/laskarit/viikko2/viikko2_kattavuus.png)
-
-### Viikko3
-
 
 
