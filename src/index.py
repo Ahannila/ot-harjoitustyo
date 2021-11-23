@@ -10,6 +10,7 @@ class Budget_calculator():
     def start(self):
         print("Welcome to budget-tracker 9000")
         print("Commands")
+        print("X: SUSPEND")
         print("1: LOGIN")
         print("2: CREATE ACCOUNT")
 
@@ -21,6 +22,8 @@ class Budget_calculator():
                 self.login()
             elif command == "2":
                 self.create_account()
+            elif command == "X":
+                break
             elif self.user!=None:
                 print("Welcome in!")
             else:
@@ -34,7 +37,7 @@ class Budget_calculator():
         if not user:
             print("User not found")
             return 
-        
+        print("Welcome user")
         self.user = user    
         return user
 
