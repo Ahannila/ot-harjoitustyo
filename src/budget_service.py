@@ -47,8 +47,9 @@ class Budget_calculator():
         return user
 
 
-    def create_account(self):
-        name = input("Enter nick: ")
+    def create_account(self, username):
+        name = username
+        print("User created")
         user_repository.create(name)
 
 app = Budget_calculator(Connection)

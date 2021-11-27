@@ -3,17 +3,19 @@ from budget_service import Budget_calculator, InvalidCreds
 
 
 class LoginView:
-    def __init__(self, root):
+    def __init__(self, root, create_user_view):
         self.root = root
         #self.root.resizable(False, False)
         self.frame = None
-        #self.handle_show_create_user_view = handle_show_create_user_view
+        self.create_user_view = create_user_view
         self.username_entry = None
         self._password_entry = None
         self._error_variable = None
         self._error_label = None
 
-        #self.show_login_view()
+    def pack(self):
+        pass
+
 
     def login_handler(self):
         username = self.username_entry.get()
@@ -27,9 +29,9 @@ class LoginView:
             self.show_error('Invalid username')
 
 
-    def show_error(self, message):
-        self._error_variable.set()
-        self._error_label.grid()
+    #def show_error(self, message):
+    #    self._error_variable.set()
+    #    self._error_label.grid()
 
     def init_username_field(self):
         username_label = ttk.Label(master=self.root, text="Username")
@@ -58,7 +60,8 @@ class LoginView:
         command=self.login_handler)
         
         button_create_account = ttk.Button(master=self.root,
-         text="Create account")
+         text="Create account",
+         command=self.create_user_view)
 
         #heading_label.grid(columnspan=2, sticky=constants.W, padx=5, pady=5)
         login_button.grid(columnspan=2, sticky=(constants.E, constants.W), padx=5, pady=5)

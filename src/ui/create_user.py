@@ -1,9 +1,9 @@
 from tkinter import Frame, ttk, constants, StringVar
-from budget_service import Budget_calculator
+from budget_service import Budget_calculator, InvalidCreds
 class Create_user:
-    def __init__(self, root):
+    def __init__(self, root, login_view):
         self._root = root
-        #self._handle_create_user = handle_create_user
+        self.login_view = login_view
         #self._handle_show_login_view = handle_show_login_view
         self._frame = None
         self._username_entry = None
@@ -12,14 +12,22 @@ class Create_user:
         self._error_label = None
 
     def create_user_handler(self):
-        pass
+        user = self._username_entry.get()
+
+        try:
+            Budget_calculator.create_account(self, user)
+            username_label = ttk.Label(master=self._root , text="Account created")
+            username_label.grid(padx=5, pady=5)
+
+        except InvalidCreds:
+            print("ERROR")
 
     def init_username_field(self):
         username_label = ttk.Label(master=self._root, text='Username')
-        self._username_entry = ttk.Entry(master=self._frame)
+        self._username_entry = ttk.Entry(master=self._root)
 
         username_label.grid(padx=5, pady=5)
-        self._username_entry.grid(row=1, column=1, sticky=(constants.E, constants.W), padx=5, pady=5)
+        self._username_entry.grid(row=5, column=1, sticky=(constants.E, constants.W), padx=5, pady=5)
 
     def show_create_user(self):
         self._frame = ttk.Frame(master=self._root)

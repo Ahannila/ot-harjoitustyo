@@ -13,16 +13,21 @@ class UI:
 
     def start(self):
         self.show_login_view()
+        #self.show_create_account()
 
     def hide_current_view(self):
         if self.current_view:
             self.current_view = None
+        self.current_view = None
 
     def show_login_view(self):
-        lg = LoginView(self.root)
-        lg.show_login_view()
+        self.hide_current_view()
+        self.current_view = LoginView(self.root, self.show_create_account)
+        self.current_view.show_login_view()
+
 
     def show_create_account(self):
-        cw = Create_user(self.root)
-        cw.show_create_user()
+        self.hide_current_view()
+        self.current_view = Create_user(self.root, self.show_login_view)
+        self.current_view.show_create_user()
 
