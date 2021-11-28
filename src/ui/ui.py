@@ -30,5 +30,5 @@ class UI:
     def show_create_account(self):
         self.hide_current_view()
         self.current_view = Create_user(self.root, self.show_login_view)
-        self.current_view.show_create_user()
+        self.current_view.pack()
 

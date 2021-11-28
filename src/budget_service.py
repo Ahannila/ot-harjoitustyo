@@ -52,5 +52,11 @@ class Budget_calculator():
         print("User created")
         user_repository.create(name)
 
+    def add_income(self, content):
+        pass
+    
+    def add_outcome(self,content):
+        pass
+
 app = Budget_calculator(Connection)
 app.start()

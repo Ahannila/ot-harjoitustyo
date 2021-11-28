@@ -11,11 +11,13 @@ class Create_user:
         self._error_variable = None
         self._error_label = None
 
+        self.show_create_user()
+
     def pack(self):
-        pass
+        self._frame.pack(fill=constants.X)
 
     def destroy(self):
-        pass
+        self._frame.destroy()
 
 
     def create_user_handler(self):
@@ -23,7 +25,7 @@ class Create_user:
 
         try:
             Budget_calculator.create_account(self, user)
-            username_label = ttk.Label(master=self._root , text="Account created")
+            username_label = ttk.Label(master=self._frame , text="Account created")
             username_label.grid(padx=5, pady=5)
             
 
@@ -31,25 +33,25 @@ class Create_user:
             print("ERROR")
 
     def init_username_field(self):
-        username_label = ttk.Label(master=self._root, text='Username')
-        self._username_entry = ttk.Entry(master=self._root)
+        username_label = ttk.Label(master=self._frame, text='Username')
+        self._username_entry = ttk.Entry(master=self._frame)
 
         username_label.grid(padx=5, pady=5)
         self._username_entry.grid(row=5, column=1, sticky=(constants.E, constants.W), padx=5, pady=5)
 
     def show_create_user(self):
-        self._frame = ttk.Frame(master=self._root)
+        self._frame = ttk.Frame(master=self._frame)
 
-        heading_label = ttk.Label(master=self._root, text='Create user')
+        heading_label = ttk.Label(master=self._frame, text='Create user')
         heading_label.grid(columnspan=2, sticky=constants.W, padx=5, pady=5)
 
         self.init_username_field()
 
-        create_account_button = ttk.Button(master=self._root,
+        create_account_button = ttk.Button(master=self._frame,
             text='Create account',
             command=self.create_user_handler)
 
-        create_back_button = ttk.Button(master=self._root,
+        create_back_button = ttk.Button(master=self._frame,
             text='Back to login',
             command=self.login_view)
 
