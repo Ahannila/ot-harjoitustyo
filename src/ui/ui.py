@@ -17,13 +17,14 @@ class UI:
 
     def hide_current_view(self):
         if self.current_view:
-            self.current_view = None
+            self.current_view.destroy()
+
         self.current_view = None
 
     def show_login_view(self):
         self.hide_current_view()
         self.current_view = LoginView(self.root, self.show_create_account)
-        self.current_view.show_login_view()
+        self.current_view.pack()
 
 
     def show_create_account(self):

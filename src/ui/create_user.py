@@ -11,6 +11,13 @@ class Create_user:
         self._error_variable = None
         self._error_label = None
 
+    def pack(self):
+        pass
+
+    def destroy(self):
+        pass
+
+
     def create_user_handler(self):
         user = self._username_entry.get()
 
@@ -18,6 +25,7 @@ class Create_user:
             Budget_calculator.create_account(self, user)
             username_label = ttk.Label(master=self._root , text="Account created")
             username_label.grid(padx=5, pady=5)
+            
 
         except InvalidCreds:
             print("ERROR")
@@ -41,4 +49,10 @@ class Create_user:
             text='Create account',
             command=self.create_user_handler)
 
+        create_back_button = ttk.Button(master=self._root,
+            text='Back to login',
+            command=self.login_view)
+
+
         create_account_button.grid(columnspan=3, padx=5,pady=5)
+        create_back_button.grid(columnspan=4, padx=5, pady=5)
