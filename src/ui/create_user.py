@@ -36,14 +36,14 @@ class Create_user:
         username_label = ttk.Label(master=self._frame, text='Username')
         self._username_entry = ttk.Entry(master=self._frame)
 
-        username_label.grid(padx=5, pady=5)
+        username_label.grid(row=5,padx=5, pady=5)
         self._username_entry.grid(row=5, column=1, sticky=(constants.E, constants.W), padx=5, pady=5)
 
     def show_create_user(self):
         self._frame = ttk.Frame(master=self._frame)
 
         heading_label = ttk.Label(master=self._frame, text='Create user')
-        heading_label.grid(columnspan=2, sticky=constants.W, padx=5, pady=5)
+        heading_label.grid(columnspan=2, sticky=constants.N, padx=5, pady=5)
 
         self.init_username_field()
 

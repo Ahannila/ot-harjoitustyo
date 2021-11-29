@@ -3,11 +3,12 @@ from budget_service import Budget_calculator, InvalidCreds
 
 
 class LoginView:
-    def __init__(self, root, create_user_view):
+    def __init__(self, root, create_user_view, auth_login):
         self.root = root
         self.root.resizable(False, False)
         self.frame = None
         self.create_user_view = create_user_view
+        self.auth_login = auth_login
         self.username_entry = None
         self._password_entry = None
         self._error_variable = None
@@ -28,7 +29,7 @@ class LoginView:
             Budget_calculator.login(self,username)
             username_label = ttk.Label(master=self.frame, text="Logged in")
             username_label.grid(padx=5, pady=5)
-
+            self.auth_login()
         except InvalidCreds:
             print("ERROR")
 
