@@ -1,6 +1,8 @@
 from sqlite3.dbapi2 import Connection
-from user_repository import user_repository
+from repositories.user_repository import user_repository
 from database_connection import get_database_connection
+from entities.user import User
+
 
 class InvalidCreds(Exception):
     pass
@@ -34,29 +36,29 @@ class Budget_calculator():
 #            else:
 #                print("No such command")
 
-
     def login(self, username):
         user = user_repository.find_by_name(username)
 
         if not user:
             print('Kirjautuminen ei onnistunut')
             raise InvalidCreds('Invalid username')
-            return 
+            return
         print("Kirjautuminen onnistui")
-        self.user = user    
+        self.user = user
+        return user
+
+    def create_account(self, username):
+        user = user_repository.create(username)
+        print("User created")
         return user
 
 
-    def create_account(self, username):
-        name = username
-        print("User created")
-        user_repository.create(name)
-
     def add_income(self, content):
         pass
-    
-    def add_outcome(self,content):
+
+    def add_expense(self, content):
         pass
+
 
 app = Budget_calculator(Connection)
 app.start()

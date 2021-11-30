@@ -1,5 +1,5 @@
-from tkinter import Frame, ttk, StringVar, constants
-from budget_service import Budget_calculator, InvalidCreds
+from tkinter import ttk, constants
+from services.budget_service import Budget_calculator, InvalidCreds
 
 
 class LoginView:
@@ -24,16 +24,16 @@ class LoginView:
 
     def login_handler(self):
         username = self.username_entry.get()
-        
+
         try:
-            Budget_calculator.login(self,username)
+            Budget_calculator.login(self, username)
             username_label = ttk.Label(master=self.frame, text="Logged in")
             username_label.grid(padx=5, pady=5)
             self.auth_login()
         except InvalidCreds:
             print("ERROR")
 
-    #def show_error(self, message):
+    # def show_error(self, message):
     #    self._error_variable.set()
     #    self._error_label.grid()
 
@@ -42,9 +42,10 @@ class LoginView:
         self.username_entry = ttk.Entry(master=self.frame)
 
         username_label.grid(padx=5, pady=5)
-        self.username_entry.grid(row=1, column=1, sticky=(constants.E, constants.W), padx=5, pady=5)
-        
-    #def init_password_field(self):
+        self.username_entry.grid(row=1, column=1, sticky=(
+            constants.E, constants.W), padx=5, pady=5)
+
+    # def init_password_field(self):
     #    password_label = ttk.Label(master=self.root, text="Password")
     #    password_entry = ttk.Entry(master=self.root)
 
@@ -53,7 +54,7 @@ class LoginView:
 
     def show_login_view(self):
         self.frame = ttk.Frame(master=self.root)
-        
+
         heading_label = ttk.Label(master=self.frame, text="Login")
         heading_label.grid(columnspan=2, sticky=constants.W, padx=5, pady=5)
 
@@ -61,18 +62,16 @@ class LoginView:
 
     #    self.init_password_field()
 
-        login_button = ttk.Button(master=self.frame, 
-        text="Login", 
-        command=self.login_handler)
-        
-        button_create_account = ttk.Button(master=self.frame,
-         text="Create account",
-         command=self.create_user_view)
+        login_button = ttk.Button(master=self.frame,
+                                  text="Login",
+                                  command=self.login_handler)
 
-         
+        button_create_account = ttk.Button(master=self.frame,
+                                           text="Create account",
+                                           command=self.create_user_view)
+
         #self.frame.grid_columnconfigure(0, weight=1, minsize=400)
         #heading_label.grid(columnspan=2, sticky=constants.W, padx=5, pady=5)
-        login_button.grid(columnspan=2, sticky=(constants.E, constants.W), padx=5, pady=5)
+        login_button.grid(columnspan=2, sticky=(
+            constants.E, constants.W), padx=5, pady=5)
         button_create_account.grid(columnspan=3, padx=5, pady=5)
-
-
