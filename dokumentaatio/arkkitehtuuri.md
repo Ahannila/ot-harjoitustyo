@@ -1,0 +1,2 @@
+
+![](./kuvat/pakkauskaavio.jpg)

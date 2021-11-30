@@ -4,7 +4,7 @@ from tkinter import ttk, constants
 
 class Budget_View:
     def __init__(self, root, login_view):
-        self._root = root
+        self.root = root
         self._frame = None
         self.login_view = login_view
         self._username_entry = None
@@ -19,7 +19,7 @@ class Budget_View:
         self._frame.destroy()
 
     def initialize(self):
-        self._frame = ttk.Frame(self._root)
+        self._frame = ttk.Frame(self.root)
         heading_label = ttk.Label(self._frame, text='Budget9000')
 
         income_button = ttk.Button(master=self._frame,

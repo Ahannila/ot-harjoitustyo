@@ -4,7 +4,7 @@ from services.budget_service import Budget_calculator, InvalidCreds
 
 class Create_user:
     def __init__(self, root, login_view):
-        self._root = root
+        self.root = root
         self.login_view = login_view
         #self._handle_show_login_view = handle_show_login_view
         self._frame = None
