@@ -1,4 +1,4 @@
-# Vaatimuusmäärittely
+git # Vaatimuusmäärittely
 
 ### Sovelluksen tarkoitus
 
