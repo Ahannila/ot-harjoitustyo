@@ -28,7 +28,7 @@ poetry run invoke start
 
 [Tuntikirjanpito](https://github.com/Ahannila/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
-
+[Arkkitehtuurikuvaus](https://github.com/Ahannila/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
 
 
