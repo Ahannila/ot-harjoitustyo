@@ -14,7 +14,7 @@ def drop_tables(connection):
 def create_tables(connection):
     cursor = connection.cursor()
 
-    cursor.execute('CREATE TABLE users (username TEXT PRIMARY KEY); ')
+    cursor.execute('CREATE TABLE users (username TEXT PRIMARY KEY, password TEXT); ')
 
     connection.commit()
 

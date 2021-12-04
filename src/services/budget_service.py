@@ -42,13 +42,13 @@ class Budget_calculator():
         if not user:
             print('Kirjautuminen ei onnistunut')
             raise InvalidCreds('Invalid username')
-            return
+            
         print("Kirjautuminen onnistui")
         self.user = user
         return user
 
-    def create_account(self, username):
-        user = user_repository.create(username)
+    def create_account(self, username, password):
+        user = user_repository.create((User(username,password)))
         print("User created")
         return user
 

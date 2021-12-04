@@ -23,9 +23,9 @@ class Create_user:
 
     def create_user_handler(self):
         user = self._username_entry.get()
-
+        password = "NULL"
         try:
-            Budget_calculator.create_account(self, user)
+            Budget_calculator.create_account(self, user, password)
             username_label = ttk.Label(
                 master=self._frame, text="Account created")
             username_label.grid(padx=5, pady=5)

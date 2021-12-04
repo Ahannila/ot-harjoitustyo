@@ -1,4 +1,5 @@
 from tkinter import ttk, constants
+from entities.user import User
 from services.budget_service import Budget_calculator, InvalidCreds
 
 
@@ -24,9 +25,10 @@ class LoginView:
 
     def login_handler(self):
         username = self.username_entry.get()
+        password = "NULL"
 
         try:
-            Budget_calculator.login(self, username)
+            Budget_calculator.login(self,username)
             username_label = ttk.Label(master=self.frame, text="Logged in")
             username_label.grid(padx=5, pady=5)
             self.auth_login()

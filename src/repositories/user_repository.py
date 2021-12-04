@@ -1,11 +1,10 @@
 
-from sqlite3.dbapi2 import Cursor
 from entities.user import User
 from database_connection import get_database_connection
 
 
 def get_user_by_row(row):
-    return User(row['username']) if row else None
+    return User(row['username'], row['password']) if row else None
 
 
 class UserRepository:
@@ -32,7 +31,7 @@ class UserRepository:
     def create(self, user):  # Tekee uuden käyttäjän.
         cursor = self._connection.cursor()
 
-        cursor.execute("INSERT INTO users (username) VALUES (?)", [user])
+        cursor.execute("INSERT INTO users (username,password) VALUES (?,?)", [user.username, user.password])
 
         self._connection.commit()
 
