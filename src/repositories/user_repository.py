@@ -19,10 +19,10 @@ class UserRepository:
 
         self._connection.commit()
 
-    def find_by_name(self, user):  # palauttaa käyttäjän kirjautuessa
+    def find_by_name(self, username):  # palauttaa käyttäjän kirjautuessa
         cursor = self._connection.cursor()
 
-        cursor.execute("SELECT * FROM users WHERE username = ?", [user])
+        cursor.execute("SELECT * FROM users WHERE username = ?", [username])
 
         row = cursor.fetchone()
 
@@ -36,6 +36,15 @@ class UserRepository:
         self._connection.commit()
 
         return user
+
+    def get_all_users(self):
+        cursor = self._connection.cursor()
+
+        cursor.execute("SELECT * FROM users")
+
+        rows = cursor.fetchall()
+
+        return list(map(get_user_by_row, rows))
 
 
 user_repository = UserRepository(get_database_connection())

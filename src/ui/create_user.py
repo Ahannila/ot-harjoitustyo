@@ -23,7 +23,7 @@ class Create_user:
 
     def create_user_handler(self):
         user = self._username_entry.get()
-        password = "NULL"
+        password = self._password_entry.get()
         try:
             Budget_calculator.create_account(self, user, password)
             username_label = ttk.Label(
@@ -31,7 +31,7 @@ class Create_user:
             username_label.grid(padx=5, pady=5)
 
         except InvalidCreds:
-            print("ERROR")
+            print("Nothin inserted")
 
     def init_username_field(self):
         username_label = ttk.Label(master=self._frame, text='Username')
@@ -41,6 +41,12 @@ class Create_user:
         self._username_entry.grid(row=5, column=1, sticky=(
             constants.E, constants.W), padx=5, pady=5)
 
+    def init_password_field(self):
+        password_label = ttk.Label(master=self._frame, text='Password')
+        self._password_entry = ttk.Entry(master=self._frame)
+
+        password_label.grid(row=6, padx=5, pady=5)
+        self._password_entry.grid(row=6, column=1)
     def show_create_user(self):
         self._frame = ttk.Frame(master=self._frame)
 
@@ -48,6 +54,7 @@ class Create_user:
         heading_label.grid(columnspan=2, sticky=constants.N, padx=5, pady=5)
 
         self.init_username_field()
+        self.init_password_field()
 
         create_account_button = ttk.Button(master=self._frame,
                                            text='Create account',
