@@ -1,4 +1,18 @@
--Alusta poetry sovellukselle. 
--Tietokannan alustus 
--Käyttäjän lisääminen tietokantaan
--käyttäjien näyttäminen tietokannasta.
+4.12 15:10
+- Tallenna user oliona tietokantaan, eikä vain usernamena [X]
+- Tee testit tietokannalle, että varmasti tallentaa oliona [X]
+- Tee income,expense Repository []
+- Tee error viesti, jos käyttäjää ei löydy [X], ja varmista että ei voi syöttää
+	tyhjää nimeä tietokantaa. [X]
+- Laita password kenttä toimintaan, ja lisää budget-serviceen salasanan 
+	tarkistus, jolloin toiminta eriytetään
+	eli loginview, muutos ja budget_service muutos. [X] !!!
+
+-budget serviceen get_user, jolloin budget_viewin sivulla voidaan
+	 näyttää käyttjän nimi []
+- create_user viewiin invalidCREDS heitto []
+
+- Tee expenselle toinen sqlite tietokanta, 
+	taulukko EXPENSE (username, amount) [X]
+- Repositio expenselle [X], entity expenselle [X]
+- Mahdollista expensen lisäys napin painalluksesta []
