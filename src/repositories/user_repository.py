@@ -43,7 +43,7 @@ class UserRepository:
         cursor.execute("SELECT * FROM users")
 
         rows = cursor.fetchall()
-
+        
         return list(map(get_user_by_row, rows))
 
 

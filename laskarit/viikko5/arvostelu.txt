@@ -1,0 +1,28 @@
+Ohjelma ladattu 10.12 klo 18:37
+
+Aloitin katselmuksen tutustumalla vaatimuusmäärittelyyn ja sen jälkeen dokumentaatioon. 
+Alla on listattuna päähavainnot.
+
+	- Luokat on eritytetty hyvin ja tietokanta on käytössä.
+	
+	- Koodissa on muistiinpanoja joka selkeyttää koodikatselmointia joissain määrin.
+	
+	- Dokumentaatio on hyvällä tasolla.
+	
+	- Mielestäni kurssidatan näkeminen kaaviona oli hienoa ja käyttäjän tekeminen oli 
+	simppeliä. 
+	
+	- Simppeli ja helppokäyttöinen ohjelma, en itse saanu minkäänlaista erroria tai
+	stack-tracea ja kirjautuminen on tehty helpoksi sen ollessa yhdessä ikkunassa.
+	
+	- En huomannut copy-pastea joka on plussaa.
+	
+	- Koodi laadullisesti hyvää, camelCase käytössä jne, en löydä moitittavaa.
+	
+	-Testikattavuus on myös hyvällä mallilla.
+	
+	-Ui olisi mielestäni hyvä eriyttää kahteen luokkaan, tällä hetkellä niiden ollessa
+	yhdessä luokassa tehden siitä ison ja hieman vaikealukuisen, muuten metodit ja luokat
+	on eriytetty hyvin.
+	
+

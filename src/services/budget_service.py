@@ -14,9 +14,9 @@ class UserExists(Exception):
 
 
 class Budget_calculator():
-    def __init__(self, connection):
+    def __init__(self):
         self.user = None
-        self._connection = connection
+        
 
     def start(self):
         pass
@@ -26,10 +26,10 @@ class Budget_calculator():
         user = user_repository.find_by_name(username)
 
         if not user or user.password != password:
-            print('Kirjautuminen ei onnistunut')
+            #print('Kirjautuminen ei onnistunut')
             raise InvalidCreds('Invalid username or password')
             
-        print("Kirjautuminen onnistui")
+        #print("Kirjautuminen onnistui")
         self.user = user
         return user
 
@@ -49,11 +49,13 @@ class Budget_calculator():
     def add_income(self, content):
         pass
 
-    def add_expense(self, content):
-        expense = expense_repository.add_expense(self.user, content)
-        print("expense added")
+    def add_expense(self,content):
+        expense = expense_repository.add_expense(self.user.username, content)
         return expense
 
+    def print_expense(self):
+        lista = expense_repository.list_expenses(self.user.username)
+        return lista
 
-app = Budget_calculator(Connection)
-app.start()
+budget_calculator = Budget_calculator()
+

@@ -1,6 +1,6 @@
 from tkinter import StringVar, ttk, constants
 from entities.user import User
-from services.budget_service import Budget_calculator, InvalidCreds
+from services.budget_service import budget_calculator, InvalidCreds
 
 
 class LoginView:
@@ -15,6 +15,7 @@ class LoginView:
         self._error_variable = None
         self._error_label = None
 
+
         self.show_login_view()
 
     def pack(self):
@@ -28,7 +29,7 @@ class LoginView:
         password = self._password_entry.get()
 
         try:
-            Budget_calculator.login(self,username,password)
+            budget_calculator.login(username,password)
             username_label = ttk.Label(master=self.frame, text="Logged in")
             username_label.grid(padx=5, pady=5)
             self.auth_login()
