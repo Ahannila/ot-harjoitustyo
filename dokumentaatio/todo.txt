@@ -1,4 +1,4 @@
-4.12 15:10
+14.12 15:10
 - Tallenna user oliona tietokantaan, eikä vain usernamena [X]
 - Tee testit tietokannalle, että varmasti tallentaa oliona [X]
 - Tee error viesti, jos käyttäjää ei löydy [X], ja varmista että ei voi syöttää
@@ -16,10 +16,10 @@
 	 budgetin. [X]
 - Mahdollista expensen lisäys napin painalluksesta [X]
 - create_user viewiin invalidCREDS heitto []
-- Expenseen ID []
+- Expenseen ID [X]
 - Mahdollisuus poistaa expense taulukosta []
 - Expensien listaaminen näytölle [X]
 - Summa expenseista [X]
 - päivittyvä summa expenseista []
 - Lisää id expenselle [X]
-- Expensen mahdollinen poisto id:n avulla []
+- Expensen poisto id:n avulla []
