@@ -31,7 +31,7 @@ poetry run invoke start
 
 [Arkkitehtuurikuvaus](https://github.com/Ahannila/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
-[Käyttöohje]()
+[Käyttöohje](https://github.com/Ahannila/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
 
 
