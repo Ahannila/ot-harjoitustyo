@@ -16,8 +16,10 @@
 	 budgetin. [X]
 - Mahdollista expensen lisäys napin painalluksesta [X]
 - create_user viewiin invalidCREDS heitto []
-- Expense taulukkoon, expensen nimeäminen []
+- Expenseen ID []
 - Mahdollisuus poistaa expense taulukosta []
-- Expensien listaaminen näytölle ja niitten muuntaminen buttoneiksi,
- josta ne voi poistaa []
-
+- Expensien listaaminen näytölle [X]
+- Summa expenseista [X]
+- päivittyvä summa expenseista []
+- Lisää id expenselle [X]
+- Expensen mahdollinen poisto id:n avulla []

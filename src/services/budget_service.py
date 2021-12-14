@@ -49,13 +49,21 @@ class Budget_calculator():
     def add_income(self, content):
         pass
 
-    def add_expense(self,content):
+    def add_expense(self,username,content):
         expense = expense_repository.add_expense(self.user.username, content)
         return expense
 
-    def print_expense(self):
+    def get_expenses(self):
         lista = expense_repository.list_expenses(self.user.username)
         return lista
+    
+    def get_sum_of_expenses(self):
+        sum = expense_repository.get_sum(self.user.username)
+        return sum
+
+    def remove_expense(self, content):
+        expense_repository.remove_expense(content)
+
 
 budget_calculator = Budget_calculator()
 

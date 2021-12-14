@@ -12,4 +12,8 @@
 | 4.12  |4     | Varmistelin että käyttäjä tallennetaan user-entiteettinä ja tein testit|
 | 6.12  |2     | Tein todo-listaa ja laitoin password kentän toimintaan|
 | 7.12  |6     | Ryhdyin suunnittelemaan expense-repositorya ja tietokannan käyttöä sen kanssa.|
-| yht   | 32    | | 
+| 9.12  |3     | Alustin expense-repositoryn ja tein muutaman metodin.|
+| 10.12 |4     | Rupesin toteuttamaan expensen lisäämistä ensin testaamalla sitä ilman graafista käyttöliittymää|
+| 11.12 |4     | Tein muutaman testin ja varmistin että expense-repository toimii oikealla tavalla.|
+| 14.12 |7     | Lisäsin graafiseen käyttöliittymään tavan lisätä tietokantaan kulu, tein testejä ja dokumentaatiota, opettelin myös tkinterin käyttöä|
+| yht   | 50    | | 
