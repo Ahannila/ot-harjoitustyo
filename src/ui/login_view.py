@@ -1,5 +1,4 @@
 from tkinter import StringVar, ttk, constants
-from entities.user import User
 from services.budget_service import budget_calculator, InvalidCreds
 
 
@@ -39,7 +38,7 @@ class LoginView:
     def show_error(self, message):
         self._error_variable.set(message)
         self._error_label.grid()
-    
+
     def hide_error(self):
         self._error_label.grid_remove()
 
@@ -56,7 +55,8 @@ class LoginView:
         self._password_entry = ttk.Entry(master=self.frame, show="*")
 
         password_label.grid(padx=5, pady=5)
-        self._password_entry.grid(row=2, column=1, sticky=(constants.E, constants.W), padx=5, pady=5)
+        self._password_entry.grid(row=2, column=1, 
+            sticky=(constants.E, constants.W), padx=5, pady=5)
 
     def show_login_view(self):
         self.frame = ttk.Frame(master=self.root)

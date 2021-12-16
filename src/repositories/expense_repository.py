@@ -1,8 +1,4 @@
-from sqlite3.dbapi2 import Connection, Cursor
-from tkinter import ttk, constants
 from database_connection import get_database_connection
-from entities.user import User
-from entities.expense import Expense
 
 def get_expense_by_row(row):
     return row[0] if row else None
@@ -40,6 +36,15 @@ class ExpenseRepository:
 
         return content
 
+
+    def get_expense_id(self,user,content):
+        cursor = self.connection.cursor()
+
+        cursor.execute("SELECT id FROM expenses WHERE (username,expense) = (?,?)", [user,content])
+
+        row = cursor.fetchone()
+
+        return get_expense_by_row(row)
 
     def remove_expense(self, id):
         cursor = self.connection.cursor()

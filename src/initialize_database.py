@@ -7,6 +7,9 @@ def drop_tables(connection):
     cursor.execute('''
         drop table if exists users;
     ''')
+    cursor.execute('''
+        drop table if exists expenses;
+    ''')
 
     connection.commit()
 

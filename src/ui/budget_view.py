@@ -1,7 +1,4 @@
-import sqlite3
-from tkinter import Label, Listbox, StringVar, ttk, constants
-from typing import ValuesView
-
+from tkinter import ttk, constants
 from entities.user import User
 from services.budget_service import budget_calculator, InvalidCreds
 
@@ -23,17 +20,25 @@ class Budget_View:
     def destroy(self):
         self._frame.destroy()
 
-    def init_budget_item(self, budget):
+    def remove_by_id(self, expense):
+        id = budget_calculator.get_expense_id(expense)
+        budget_calculator.remove_expense(id)
+        pass
 
+    def init_sum_of_budgets(self):
         sum = str(budget_calculator.get_sum_of_expenses())
         expenses_label = ttk.Label(self._frame, text="Current monthly expenses:  "+sum+"€")
         expenses_label.grid(row=1,sticky=(constants.W), padx=5, pady=5)
 
-        item_frame = ttk.Frame(master=self._frame)
+    def init_budget_item(self, budget):
+        self.init_sum_of_budgets()
+
+        expense_id = budget_calculator.get_expense_id(budget)
 
         set_budget_button = ttk.Button(
             master=self._frame,
-            text=budget
+            text=budget,
+            command= lambda: self.remove_expense(set_budget_button, expense_id)
         )
 
         set_budget_button.grid(
@@ -42,11 +47,20 @@ class Budget_View:
             pady=5,
             sticky=constants.W
         )
-        item_frame.grid_columnconfigure(0, weight=1)
+
+
+    def remove_expense(self, button, expense_id):
+        button.destroy()
+        budget_calculator.remove_expense(expense_id)
+        self.init_sum_of_budgets()
+
 
     def show_expenses(self):
         expenses = budget_calculator.get_expenses()
+    
+        self.remove_by_id(22)
         for expense in expenses:
+            print(budget_calculator.get_expense_id(expense))
             print(expense)
             self.init_budget_item(expense)  
 

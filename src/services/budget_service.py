@@ -57,12 +57,16 @@ class Budget_calculator():
         lista = expense_repository.list_expenses(self.user.username)
         return lista
     
+    def get_expense_id(self,expense):
+        id = expense_repository.get_expense_id(self.user.username, expense)
+        return id
+
     def get_sum_of_expenses(self):
         sum = expense_repository.get_sum(self.user.username)
         return sum
 
-    def remove_expense(self, content):
-        expense_repository.remove_expense(content)
+    def remove_expense(self, id):
+        expense_repository.remove_expense(id)
 
 
 budget_calculator = Budget_calculator()
