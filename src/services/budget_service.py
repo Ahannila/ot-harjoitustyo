@@ -15,12 +15,10 @@ class UserExists(Exception):
 
 class Budget_calculator():
     def __init__(self):
-        self.user = None
-        
+        self.user = None        
 
     def start(self):
         pass
-
 
     def login(self, username, password):
         user = user_repository.find_by_name(username)
