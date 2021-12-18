@@ -1,3 +1,4 @@
+"""
 import tkinter as tk
 from matplotlib import pyplot as plt
 root=tk.Tk()
@@ -49,3 +50,6 @@ tags_entry.grid(row=2,column=1)
 Submit_Button.grid(row=3, column = 1)
    
 root.mainloop() 
+
+"""
+

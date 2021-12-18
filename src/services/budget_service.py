@@ -1,4 +1,3 @@
-from sqlite3.dbapi2 import Connection
 from repositories.user_repository import user_repository
 from repositories.expense_repository import expense_repository
 from database_connection import get_database_connection
@@ -15,7 +14,7 @@ class UserExists(Exception):
 
 class Budget_calculator():
     def __init__(self):
-        self.user = None        
+        self.user = None
 
     def start(self):
         pass
@@ -44,11 +43,11 @@ class Budget_calculator():
     def get_user(self):
         return self.user
 
-    def add_income(self, content):
-        pass
 
-    def add_expense(self,content):
-        expense = expense_repository.add_expense(self.user.username, content)
+    def add_budget(self,name,content):
+        final_name = name+": "
+        expense = Expense(self.user.username, final_name, content)
+        expense_repository.add_expense(expense)
         return expense
 
     def get_expenses(self):
@@ -58,6 +57,11 @@ class Budget_calculator():
     def get_expense_id(self,expense):
         id = expense_repository.get_expense_id(self.user.username, expense)
         return id
+
+    def get_expense_name_with_id(self,id):
+        name = expense_repository.get_expense_name_with_id(id)
+        return name
+
 
     def get_sum_of_expenses(self):
         sum = expense_repository.get_sum(self.user.username)

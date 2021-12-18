@@ -1,9 +1,7 @@
-from tkinter.constants import S
 from ui.login_view import LoginView
 from ui.create_user import Create_user
 from ui.budget_view import Budget_View
-from tkinter import Tk
-
+from ui.graph_view import Graph_View
 
 class UI:
     def __init__(self, root):
@@ -33,5 +31,10 @@ class UI:
 
     def show_budget_service(self):
         self.hide_current_view()
-        self.current_view = Budget_View(self.root, self.show_login_view)
+        self.current_view = Budget_View(self.root, self.show_login_view, self.show_graph_view)
+        self.current_view.pack()
+
+    def show_graph_view(self):
+        self.hide_current_view()
+        self.current_view = Graph_View(self.root, self.show_budget_service)
         self.current_view.pack()
