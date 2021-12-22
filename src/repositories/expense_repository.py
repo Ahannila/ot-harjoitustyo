@@ -42,6 +42,13 @@ class ExpenseRepository:
 
 
     def get_expense_as_entity(self, id, username, content):
+        """Palauttaa kulun/menon entiteettinä, jossa ovat id, käyttäjätunnus
+        ja kulu/meno.
+        
+        Args: id = kulun/menon merkkaava id
+            username = käyttäjän nimike
+            content = kulun/menon määrä
+        """
         cursor = self.connection.cursor()
 
         cursor.execute("SELECT id, username, name, expense FROM expenses where (id,username,expense) = (?,?,?)", [id, username, content])
@@ -51,6 +58,11 @@ class ExpenseRepository:
         return get_whole_expense_by_row(row)
 
     def get_expense_id(self,user,content):
+        """Valitsee kulun/menon id:n käyttäjätunnuksen ja kulun määrän avulla
+        
+        Args: user = käyttäjän nimi
+              content = kulun/menon määrä
+        """
         cursor = self.connection.cursor()
 
         cursor.execute("SELECT id FROM expenses WHERE (username,expense) = (?,?)", [user,content])
@@ -60,6 +72,10 @@ class ExpenseRepository:
         return get_expense_by_row(row)
 
     def get_expense_name_with_id(self, id):
+        """Hakee kulun/menon nimen tietokannasta sen id:n avulla
+        
+        Args: id = kulun/menon päätunniste
+        """
         cursos = self.connection.cursor()
 
         cursos.execute("SELECT name FROM expenses WHERE id= ?",[id])
@@ -69,6 +85,10 @@ class ExpenseRepository:
         return get_expense_by_row(row)
 
     def remove_expense(self, id):
+        """Poistaa tietokannasta kulun/menon id:n avulla
+        
+        Args: id = kulun/menon päätunniste
+        """
         cursor = self.connection.cursor()
 
         cursor.execute("DELETE FROM expenses WHERE id = ?", [id])
@@ -79,6 +99,10 @@ class ExpenseRepository:
 
 
     def list_expenses(self, user):
+        """Vie listan kaikista kuluista mitä nykyisellä käyttäjällä on.
+        
+        Args:user = käyttäjän nimike
+        """
         cursor = self.connection.cursor()
 
         cursor.execute("SELECT expense FROM expenses WHERE username = ?", [user])
@@ -89,6 +113,10 @@ class ExpenseRepository:
 
 
     def get_sum(self, user):
+        """Palauttaa summan kaikista käyttäjä kuluista
+        
+        Args:user = käyttäjän nimike
+        """
         cursor = self.connection.cursor()
 
         cursor.execute("SELECT SUM(expense) FROM expenses WHERE username = ?",[user])

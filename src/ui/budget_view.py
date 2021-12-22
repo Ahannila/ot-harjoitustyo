@@ -3,11 +3,10 @@ from services.budget_service import budget_calculator
 
 
 class Budget_View:
-    def __init__(self, root, login_view, graph_view):
+    def __init__(self, root, login_view):
         self.root = root
         self._frame = None
         self.login_view = login_view
-        self.graph_view = graph_view
         self.create_expense_entry = None
         self.user = budget_calculator.get_user()
         self.initialize()
@@ -62,19 +61,22 @@ class Budget_View:
 
     def create_expense_handler(self):
         expense = self.expense_entry.get()
-        expense = "-"+expense
+        expense = " -"+expense
+        name = self.name_entry.get()+": "
         try:
-            budget_calculator.add_budget(self.name_entry.get(), expense)
-            self.init_budget_item(self.name_entry.get(),expense)
+            budget_calculator.add_budget(name, expense)
+            self.init_budget_item(name,expense)
             self.clear_text()
         except:
             print("Error while creating expense")
 
     def create_income_handler(self):
         income = self.income_entry.get()
+        name = self.name_entry.get()+": "
         try:
-            budget_calculator.add_budget(self.name_entry.get(),income)
-            self.init_budget_item(self.name_entry.get(),income)
+            budget_calculator.add_budget(name, income)
+            self.init_budget_item(name,income)
+            self.clear_text()
             self.clear_text()
         except:
             print("Error while creating expense")
@@ -83,12 +85,6 @@ class Budget_View:
         self.expense_entry.delete(0, 'end')
         self.income_entry.delete(0, 'end')
         self.name_entry.delete(0, 'end')
-
-    def move_to_graph(self):
-        try:
-            self.graph_view()
-        except:
-            print("error")
 
     def initialize(self):
         self._frame = ttk.Frame(master=self.root)
@@ -111,11 +107,6 @@ class Budget_View:
                             text="Add income",
                             command=self.create_income_handler)
 
-        graph_button = ttk.Button(master=self._frame,
-                            text='View graph of budgets',
-                            command=self.graph_view)
-        graph_button.grid()
-
         
         expense_button.grid(row=2,sticky=(constants.W), padx=5, pady=5)
         self.expense_entry.grid(row=2, sticky=(constants.E), padx=5, pady=5)
@@ -123,13 +114,15 @@ class Budget_View:
         income_button.grid(row=2,column=1, padx=5, pady=5)
         self.income_entry.grid(row=2, column=2,padx=5, pady=5)
 
-        name_entry_label.grid(row=1, column=2,padx=5, pady=5)
-        self.name_entry.grid(row=1,column=3, sticky=(constants.E))
+        name_entry_label.grid(row=1, column=1,padx=5, pady=5)
+        self.name_entry.grid(row=1,column=2, padx=5, pady=5, sticky=(constants.E))
 
         heading_label.grid(row=0, padx=5, pady=5)
 
         self._frame.grid_columnconfigure(0, weight=1, minsize=300)
         self._frame.grid_columnconfigure(1, weight=1)
+
+        
 
 
         

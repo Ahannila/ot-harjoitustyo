@@ -31,7 +31,12 @@ class Create_user:
             username_label.grid(padx=5, pady=5)
 
         except InvalidCreds:
-            print("Nothin inserted")
+            self.show_error("Username taken or not valid")
+            
+    
+    def show_error(self, message):
+        self._error_variable.set(message)
+        self._error_label.grid()
 
     def init_username_field(self):
         username_label = ttk.Label(master=self._frame, text='Username')
@@ -47,6 +52,7 @@ class Create_user:
 
         password_label.grid(row=6, padx=5, pady=5)
         self._password_entry.grid(row=6, column=1)
+
     def show_create_user(self):
         self._frame = ttk.Frame(master=self._frame)
 
@@ -55,6 +61,12 @@ class Create_user:
 
         self.init_username_field()
         self.init_password_field()
+
+
+        self._error_variable = StringVar(self._frame)
+        self._error_label = ttk.Label(master=self._frame, 
+        textvariable=self._error_variable,
+        foreground='red')
 
         create_account_button = ttk.Button(master=self._frame,
                                            text='Create account',

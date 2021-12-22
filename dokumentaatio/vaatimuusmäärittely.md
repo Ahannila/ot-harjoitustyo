@@ -41,3 +41,8 @@ kokonaisrahamäärän.
 - Käyttäjä voi lisätä saldoa budjetoinninkohteeseen.
 
 - Käyttäjä voi kirjautua järjestelmästä ulos.
+
+
+## Jatkokehitysideoita, asioita joita jäi implementoimatta
+
+- Alkuperäisestä suunnitelmasta jäi toteuttamatta, graafi sekä saldo. 
