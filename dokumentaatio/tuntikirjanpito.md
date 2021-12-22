@@ -15,5 +15,12 @@
 | 9.12  |3     | Alustin expense-repositoryn ja tein muutaman metodin.|
 | 10.12 |4     | Rupesin toteuttamaan expensen lisäämistä ensin testaamalla sitä ilman graafista käyttöliittymää|
 | 11.12 |4     | Tein muutaman testin ja varmistin että expense-repository toimii oikealla tavalla.|
-| 14.12 |7     | Lisäsin graafiseen käyttöliittymään tavan lisätä tietokantaan kulu, tein testejä ja dokumentaatiota, opettelin myös tkinterin käyttöä|
-| yht   | 50    | | 
+| 14.12 |7     | Lisäsin graafiseen käyttöliittymään tavan lisätä tietokantaan kulun, tein testejä ja dokumentaatiota, opettelin myös tkinterin käyttöä|
+| 16.12 |4     | Opettelin miten graafeja implementoidaan ja käytetään mathplotlibillä|
+| 17.12 |5     | Totesin että turha implementoida näin myöhään ja peruin graafien lisäämisen|
+| 19.12 |4     | Tein dokumentaatiota|
+| 22.12 |4     | Testejä ja dokumentaatiota|
+
+
+
+| yht   | 67    | | 
