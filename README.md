@@ -33,6 +33,7 @@ poetry run invoke start
 
 [Käyttöohje](https://github.com/Ahannila/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
+[Testausdokumentti](https://github.com/Ahannila/ot-harjoitustyo/blob/master/dokumentaatio/testit.md)
 
 
 
