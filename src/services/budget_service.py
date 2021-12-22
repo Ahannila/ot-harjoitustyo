@@ -15,8 +15,6 @@ class Budget_calculator():
     def __init__(self):
         self.user = None
 
-    def start(self):
-        pass
 
     def login(self, username, password):
         """Kirjaa käyttäjän sisään.

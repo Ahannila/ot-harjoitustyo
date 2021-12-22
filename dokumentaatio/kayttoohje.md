@@ -16,6 +16,7 @@ poetry run invoke start
 ## Kirjautuminen
 
 ![](./kuvat/login.png)
+
 Ruudulle ilmestyy kirjautumisruutu. Jos olet jo tehnyt käyttäjän syötä ruutuihin käyttäjänimesi ja salasanasi ja paina login. Jos sinulla ei ole käyttäjää paina Create account.
 
 ## Uuden käyttäjän luominen
@@ -27,4 +28,5 @@ Uusi käyttäjä luodaan siirtymällä kirjautumisruudulta käyttäjänluomisruu
 ## Uuden kulun/menon lisäys
 
 ![](./kuvat/budget_view.png)
+
 Tässä näkymässä voit lisätä uusia Menon/kulun. Meno lisätään Add income painikkeesta ensin syöttämällä kenttään menon määrän numeroina ja sitten painamalla Add expense painiketta. Sama käytäntö on Add expense kohdassa. Tulo/menolle voi lisätä myös nimen syöttämällä se ylläolevaan ruutuun samaan aikaan kun olet lisäämässä budjettia. Sovelluksesta lähdetään painamalla yläoikeaa X nappia.
