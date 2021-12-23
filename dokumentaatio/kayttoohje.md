@@ -25,8 +25,14 @@ Ruudulle ilmestyy kirjautumisruutu. Jos olet jo tehnyt käyttäjän syötä ruut
 
 Uusi käyttäjä luodaan siirtymällä kirjautumisruudulta käyttäjänluomisruutuun painamalla create user-painiketta. Kirjoita ruutuihin haluamasi käyttäjätunnus ja salasana. Ruutuun ilmoitetaan että käyttäjä on luotu ja voit palata edelliseen näkymään painamalla Back to login.
 
-## Uuden kulun/menon lisäys
+## Uuden Tulo/menon lisäys
 
 ![](./kuvat/budget_view.png)
 
-Tässä näkymässä voit lisätä uusia Menon/kulun. Meno lisätään Add income painikkeesta ensin syöttämällä kenttään menon määrän numeroina ja sitten painamalla Add expense painiketta. Sama käytäntö on Add expense kohdassa. Tulo/menolle voi lisätä myös nimen syöttämällä se ylläolevaan ruutuun samaan aikaan kun olet lisäämässä budjettia. Sovelluksesta lähdetään painamalla yläoikeaa X nappia.
+Tässä näkymässä voit lisätä uusia Tulo/menoja. Meno lisätään Add expense painikkeesta ensin syöttämällä kenttään menon määrän numeroina ja sitten painamalla Add expense painiketta. Sama käytäntö on Add income kohdassa. Tulo/menolle voi lisätä myös nimen syöttämällä se ylläolevaan ruutuun samaan aikaan kun olet lisäämässä budjettia. Sovelluksesta lähdetään painamalla yläoikeaa X nappia.
+
+## Tulo/menon poisto
+
+![](./kuvat/poisto.png)
+
+Painamalla nappia jossa näkyy meno, voi sen poistaa. Kun meno poistuu näkyvistä se poistetaan myös tietokannasta ja budjettien summa päivittyy.

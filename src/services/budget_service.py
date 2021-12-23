@@ -82,7 +82,7 @@ class Budget_calculator():
 
         Args:
             name (String): Käyttäjän nimike
-            content ([type]): Lisättävän budjetioinni määrä
+            content ([type]): Lisättävän budjetoinnin määrä
 
         Returns:
             Expense: Expense-olion

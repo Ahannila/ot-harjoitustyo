@@ -25,7 +25,7 @@ class ExpenseRepository:
 
 
     def add_expense(self, budget):
-        """Lisää tietokantaan kulun
+        """Lisää tietokantaan tulo/menon
         
         Args:
             user: Käyttäjän username, joka tallennetaan tietokantaan.
@@ -42,12 +42,12 @@ class ExpenseRepository:
 
 
     def get_expense_as_entity(self, id, username, content):
-        """Palauttaa kulun/menon entiteettinä, jossa ovat id, käyttäjätunnus
+        """Palauttaa tulo/menon entiteettinä, jossa ovat id, käyttäjätunnus
         ja kulu/meno.
         
-        Args: id = kulun/menon merkkaava id
+        Args: id = tulo/menon merkkaava id
             username = käyttäjän nimike
-            content = kulun/menon määrä
+            content = tulo/menon määrä
         """
         cursor = self.connection.cursor()
 
@@ -58,10 +58,10 @@ class ExpenseRepository:
         return get_whole_expense_by_row(row)
 
     def get_expense_id(self,user,content):
-        """Valitsee kulun/menon id:n käyttäjätunnuksen ja kulun määrän avulla
+        """Valitsee tulo/menon id:n käyttäjätunnuksen ja kulun määrän avulla
         
         Args: user = käyttäjän nimi
-              content = kulun/menon määrä
+              content = tulo/menon määrä
         """
         cursor = self.connection.cursor()
 
@@ -72,9 +72,9 @@ class ExpenseRepository:
         return get_expense_by_row(row)
 
     def get_expense_name_with_id(self, id):
-        """Hakee kulun/menon nimen tietokannasta sen id:n avulla
+        """Hakee tulo/menon nimen tietokannasta sen id:n avulla
         
-        Args: id = kulun/menon päätunniste
+        Args: id = tulo/menon päätunniste
         """
         cursos = self.connection.cursor()
 
@@ -85,9 +85,9 @@ class ExpenseRepository:
         return get_expense_by_row(row)
 
     def remove_expense(self, id):
-        """Poistaa tietokannasta kulun/menon id:n avulla
+        """Poistaa tietokannasta tulo/menon id:n avulla
         
-        Args: id = kulun/menon päätunniste
+        Args: id = tulo/menon päätunniste
         """
         cursor = self.connection.cursor()
 
